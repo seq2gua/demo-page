@@ -5,5 +5,7 @@ web page for presentation
 django==2.1.5
 
 ## Run
+```
 cd gua
 python3 manage.py runserver
+```
