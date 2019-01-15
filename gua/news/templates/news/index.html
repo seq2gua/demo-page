@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>看新闻，学新闻，我有知识我自豪！</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="{% static 'news/img/icon.png' %}" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="css/bootstrap4.1.1.min.css" rel="stylesheet"> -->
+    <link href="{% static 'news/css/bootstrap4.1.1.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'news/css/mdb.min.css' %}" rel="stylesheet">
+    <!-- <link href="css/mdb.min.css" rel="stylesheet"> -->
+    <!-- Sidebar -->
+    <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
+    <link href="{% static 'news/css/simple-sidebar.css' %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="{% static 'news/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" id="articles">
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-dark lighten-4">
+            <a href="#menu-toggle" id="menu-toggle"><i class="fas fa-align-justify"></i></a>
+            <a class="navbar-brand ml-auto" href="#">
+                <img src=" {% static 'news/img/icon.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                看新闻，学新闻，我有知识我自豪！
+            </a>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="md-form">
+                        <i id="text-icon" class="fa fa-pencil-alt prefix"></i>
+                        <textarea type="text" id="text" class="text-white md-textarea md-textarea-auto form-control" >
+知识图谱有自顶向下和自底向上2种构建方式。所谓自顶向下构建是借助百科类网站等结构化数据源，从高质量数据中提取本体和模式信息，加入到知识库中；所谓自底向上构建，则是借助一定的技术手段，从公开采集的数据中提取出资源模式，选择其中置信度较高的新模式，经人工审核之后，加入到知识库中。
+
+目前知识图谱大多采用自底向上的方式构建，本文也主要介绍自底向上的知识图谱构建技术，按照知识获取的过程分为3个层次：信息抽取、知识融合以及知识加工。
+
+知识图谱的构建技术
+采用自底向上的方式构建知识图谱的过程是一个迭代更新的过程，每一轮更新包括3个步骤：
+                        </textarea>
+                        <label id="text-label" for="text">News</label>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row justify-content-center" id="summary-button">
+                <a href="#" onclick="summary()">
+                    <i class="far fa-arrow-alt-circle-down fa-3x animated flipInX"></i>
+                </a>
+            </div>
+            <div class="container-fluid pt-3" id="summary">
+
+            </div>
+
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="{% static 'news/js/jquery-3.3.1.min.js' %}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{% static 'news/js/popper-1.14.5.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{% static 'news/js/bootstrap4.1.1.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{% static 'news/js/mdb.min.js' %}"></script>
+<!-- Sidebar -->
+<script type="text/javascript" src="{% static 'news/js/sidebar.js' %}"></script>
+<!-- Your custom javascript (optional) -->
+<script type="text/javascript" src="{% static 'news/js/index.js' %}"></script>
+</body>
+
+</html>
