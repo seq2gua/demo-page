@@ -43,6 +43,24 @@
 
         <nav class="navbar navbar-dark lighten-4">
             <a href="#menu-toggle" id="menu-toggle"><i class="fas fa-align-justify"></i></a>
+
+            <div class="form-check form-check-inline ml-auto">
+                <input type="radio" class="form-check-input" id="materialInline1" name="methodRadios" value="Extract" checked>
+                <label class="form-check-label" for="materialInline1">抽取式</label>
+            </div>
+
+            <!-- Material inline 2 -->
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline2" name="methodRadios" value="Seq2Seq">
+                <label class="form-check-label" for="materialInline2">Seq2Seq</label>
+            </div>
+
+            <!-- Material inline 3 -->
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline3" name="methodRadios" value="Transformer">
+                <label class="form-check-label" for="materialInline3">Transformer</label>
+            </div>
+
             <a class="navbar-brand ml-auto" href="#">
                 <img src=" {% static 'news/img/icon.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
                 看新闻，学新闻，我有知识我自豪！
@@ -54,13 +72,7 @@
                 <div class="col-10">
                     <div class="md-form">
                         <i id="text-icon" class="fa fa-pencil-alt prefix"></i>
-                        <textarea type="text" id="text" class="text-white md-textarea md-textarea-auto form-control" >
-知识图谱有自顶向下和自底向上2种构建方式。所谓自顶向下构建是借助百科类网站等结构化数据源，从高质量数据中提取本体和模式信息，加入到知识库中；所谓自底向上构建，则是借助一定的技术手段，从公开采集的数据中提取出资源模式，选择其中置信度较高的新模式，经人工审核之后，加入到知识库中。
-
-目前知识图谱大多采用自底向上的方式构建，本文也主要介绍自底向上的知识图谱构建技术，按照知识获取的过程分为3个层次：信息抽取、知识融合以及知识加工。
-
-知识图谱的构建技术
-采用自底向上的方式构建知识图谱的过程是一个迭代更新的过程，每一轮更新包括3个步骤：
+                        <textarea type="text" id="text" class="text-white form-control" rows="25">
                         </textarea>
                         <label id="text-label" for="text">News</label>
                     </div>
@@ -68,12 +80,16 @@
                 <div class="col-1"></div>
             </div>
             <div class="row justify-content-center" id="summary-button">
-                <a href="#" onclick="summary()">
+                <a href="#" onclick="createSummary()">
                     <i class="far fa-arrow-alt-circle-down fa-3x animated flipInX"></i>
                 </a>
             </div>
             <div class="container-fluid pt-3" id="summary">
-
+                <!--<div class="row justify-content-center animated bounceIn">-->
+                    <!--<div class="alert alert-primary form-inline" role="alert">-->
+                        <!--A simple primary <input class="form-control ml-1 mr-1" type="text" size="6" value="hello"> summary it out!-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
 
         </div>
@@ -81,6 +97,12 @@
     <!-- /#page-content-wrapper -->
 </div>
 <!-- /#wrapper -->
+
+<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <img class="modal-content" id="alertImg">
+    </div>
+</div>
 
 
 <!-- SCRIPTS -->

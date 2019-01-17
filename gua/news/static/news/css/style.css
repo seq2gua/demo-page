@@ -5,6 +5,21 @@ body{
     font-size: 1.05em;
     font-family: "Microsoft YaHei","Segoe UI", "Lucida Grande", Helvetica, Arial,sans-serif;
 }
+textarea.md-textarea {
+    overflow-y: visible;
+    resize: none;
+    min-height: 32rem;
+    /*overflow-y: scroll;*/
+}
+
+textarea {
+    /*background: #494A5F;*/
+    background-color: #494A5F !important;
+    overflow: auto;
+    border: none !important;
+    resize: none;
+}
+
 /* Header */
 /*.header{*/
     /*padding: 1em 190px 1em;*/
