@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>看新闻，学新闻，我有知识我自豪！</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="{% static 'news/img/icon.png' %}" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="css/bootstrap4.1.1.min.css" rel="stylesheet"> -->
+    <link href="{% static 'news/css/bootstrap4.1.1.min.css' %}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{% static 'news/css/mdb.min.css' %}" rel="stylesheet">
+    <!-- <link href="css/mdb.min.css" rel="stylesheet"> -->
+    <!-- Sidebar -->
+    <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
+    <link href="{% static 'news/css/simple-sidebar.css' %}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <link href="{% static 'news/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" id="articles">
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-dark lighten-4">
+            <a href="#menu-toggle" id="menu-toggle"><i class="fas fa-align-justify"></i></a>
+
+            <div class="form-check form-check-inline ml-auto">
+                <input type="radio" class="form-check-input" id="materialInline1" name="methodRadios" value="Extract" checked>
+                <label class="form-check-label" for="materialInline1">抽取式</label>
+            </div>
+
+            <!-- Material inline 2 -->
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline2" name="methodRadios" value="Seq2Seq">
+                <label class="form-check-label" for="materialInline2">Seq2Seq</label>
+            </div>
+
+            <!-- Material inline 3 -->
+            <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" id="materialInline3" name="methodRadios" value="Transformer">
+                <label class="form-check-label" for="materialInline3">Transformer</label>
+            </div>
+
+            <a class="navbar-brand ml-auto" href="#">
+                <img src=" {% static 'news/img/icon.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+                看新闻，学新闻，我有知识我自豪！
+            </a>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <div class="md-form">
+                        <i id="text-icon" class="fa fa-pencil-alt prefix"></i>
+                        <textarea type="text" id="text" class="text-white form-control" rows="18">
+                        </textarea>
+                        <label id="text-label" for="text">News</label>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+            </div>
+            <div class="row justify-content-center" id="summary-button">
+                <a href="#" onclick="createSummary()">
+                    <i class="far fa-arrow-alt-circle-down fa-3x animated flipInX"></i>
+                </a>
+            </div>
+            <div class="container-fluid pt-3" id="summary">
+                <!--<div class="row justify-content-center animated bounceIn">-->
+                    <!--<div class="alert alert-primary form-inline" role="alert">-->
+                        <!--A simple primary <input class="form-control ml-1 mr-1" type="text" size="6" value="hello"> summary it out!-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <img class="modal-content" id="alertImg">
+    </div>
+</div>
+
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="{% static 'news/js/jquery-3.3.1.min.js' %}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{% static 'news/js/popper-1.14.5.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{% static 'news/js/bootstrap4.1.1.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{% static 'news/js/mdb.min.js' %}"></script>
+<!-- Sidebar -->
+<script type="text/javascript" src="{% static 'news/js/sidebar.js' %}"></script>
+<!-- Your custom javascript (optional) -->
+<script type="text/javascript" src="{% static 'news/js/index.js' %}"></script>
+</body>
+
+</html>
